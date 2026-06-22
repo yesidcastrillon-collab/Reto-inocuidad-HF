@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reto Inocuidad HF — Examen de Inocuidad Alimentaria</title>
+  <link rel="icon" href="assets/logo.svg" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- EmailJS (correo automático) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+<div class="app">
+
+  <!-- ============ PANTALLA 1: INICIO / DATOS DEL ESTUDIANTE ============ -->
+  <section id="pantalla-inicio" class="pantalla activa">
+    <div class="card">
+      <img src="assets/logo.svg" alt="Logo" class="logo" />
+      <h1 id="titulo-materia">Examen de Inocuidad Alimentaria</h1>
+      <p class="subtitulo" id="subtitulo-inst">Reto Inocuidad HF</p>
+      <div class="info-examen" id="info-examen"></div>
+
+      <form id="form-inicio" novalidate>
+        <label>Nombre completo *
+          <input type="text" id="nombre" placeholder="Ej: Ana María Pérez" required />
+        </label>
+        <label>Documento / N.º de lista *
+          <input type="text" id="documento" placeholder="Ej: 1003456789" required />
+        </label>
+        <label>Grado / Curso / Cargo
+          <input type="text" id="grado" placeholder="Ej: 10-B o Manipulador" />
+        </label>
+        <p class="error" id="error-inicio"></p>
+        <button type="submit" class="btn btn-primario">Comenzar examen ▶</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================== PANTALLA 2: EXAMEN ===================== -->
+  <section id="pantalla-quiz" class="pantalla">
+    <header class="quiz-top">
+      <div class="progreso">
+        <span id="contador-preguntas">Pregunta 1 de 20</span>
+        <div class="barra"><div id="barra-progreso" class="barra-fill"></div></div>
+      </div>
+      <div id="cronometro" class="cronometro">
+        <svg viewBox="0 0 36 36" class="crono-svg">
+          <path class="crono-bg" d="M18 2a16 16 0 1 1 0 32 16 16 0 0 1 0-32"/>
+          <path id="crono-arco" class="crono-arco" d="M18 2a16 16 0 1 1 0 32 16 16 0 0 1 0-32"/>
+        </svg>
+        <span id="crono-num">25</span>
+      </div>
+    </header>
+
+    <div class="card pregunta-card">
+      <span id="etiqueta-tema" class="etiqueta-tema">Tema</span>
+      <img id="img-pregunta" class="img-pregunta" alt="Ilustración de la pregunta" />
+      <h2 id="texto-pregunta">Pregunta…</h2>
+      <div id="opciones" class="opciones"></div>
+      <button id="btn-siguiente" class="btn btn-primario" disabled>Siguiente ▶</button>
+    </div>
+  </section>
+
+  <!-- ===================== PANTALLA 3: RESULTADO ===================== -->
+  <section id="pantalla-resultado" class="pantalla">
+    <div class="card">
+      <div id="veredicto-badge" class="veredicto-badge"></div>
+      <h1 id="resultado-titulo"></h1>
+      <p id="resultado-detalle" class="resultado-detalle"></p>
+
+      <canvas id="certificado" width="1000" height="700" class="certificado-canvas"></canvas>
+
+      <div class="acciones">
+        <button id="btn-descargar" class="btn btn-primario">⬇ Descargar certificado</button>
+        <button id="btn-whatsapp" class="btn btn-wa">Enviar resultado por WhatsApp</button>
+        <button id="btn-reiniciar" class="btn btn-secundario">Realizar otro intento</button>
+      </div>
+      <p id="estado-envios" class="estado-envios"></p>
+    </div>
+  </section>
+
+</div>
+
+<script src="config.js"></script>
+<script src="data/questions.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

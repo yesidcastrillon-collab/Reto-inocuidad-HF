@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <rect width="400" height="240" fill="#f8fafc"/>
+  <rect width="400" height="240" fill="#db2777" opacity="0.07"/>
+  
+    <path d="M174 142 v-34 a7 7 0 0 1 14 0 v-30 a7 7 0 0 1 14 0 v28 a7 7 0 0 1 14 0 v2 a7 7 0 0 1 14 0 v34 q0 0 -2 0 h-66 z" fill="none" stroke="#db2777" stroke-width="5"/>
+  <rect x="0" y="198" width="400" height="42" fill="#db2777"/>
+  <text x="200" y="225" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">Higiene del Personal</text>
+</svg>
