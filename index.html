@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reto Inocuidad · Heaven Food</title><style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Segoe UI,Roboto,Arial,sans-serif}
+body{color:#e2e8f0;background:linear-gradient(160deg,#0f172a,#1e293b);min-height:100vh;padding:16px}
+.b{max-width:600px;margin:0 auto}
+.c{background:#1e293b;border:1px solid #334155;border-radius:16px;padding:22px;box-shadow:0 12px 40px rgba(0,0,0,.4)}
+.s{display:none}.s.on{display:block}
+h1{font-size:26px;text-align:center}.m{color:#94a3b8;text-align:center;font-size:13px;margin-top:3px}
+.lg{width:108px;height:108px;display:block;margin:0 auto 6px}
+.in{color:#cbd5e1;text-align:center;font-size:14px;line-height:1.5;margin:14px 0}
+label{font-size:13px;color:#94a3b8;font-weight:600;display:block;margin:10px 0 4px}
+input{width:100%;padding:12px;border-radius:10px;border:1px solid #334155;background:#0f172a;color:#e2e8f0;font-size:16px}
+.bt{border:none;cursor:pointer;font-weight:700;font-size:16px;padding:14px;border-radius:12px;width:100%;margin-top:12px;color:#04210f;background:linear-gradient(135deg,#22c55e,#16a34a)}
+.bg{background:#334155;color:#cbd5e1}
+.h{display:flex;justify-content:space-between;font-size:13px;color:#94a3b8;margin-bottom:8px}
+.p{font-weight:800;padding:4px 10px;border-radius:99px;font-size:13px;background:rgba(234,179,8,.18);color:#fde047}
+.bar{height:7px;background:#0f172a;border-radius:99px;overflow:hidden;margin-bottom:14px}.bar>i{display:block;height:100%;width:0;background:#22c55e;transition:.5s}
+.lv{font-size:11px;font-weight:800;padding:4px 9px;border-radius:6px;color:#fff;background:#2563eb;text-transform:uppercase;margin-bottom:12px;display:inline-block}
+.q{font-size:18px;line-height:1.4;margin-bottom:14px}
+.o{display:block;width:100%;text-align:left;background:#0f172a;border:2px solid #334155;color:#e2e8f0;padding:12px 14px;border-radius:11px;cursor:pointer;font-size:15px;margin-bottom:8px}
+.o.ok{border-color:#22c55e;background:rgba(34,197,94,.2)}.o.no{border-color:#ef4444;background:rgba(239,68,68,.18)}
+.f{margin-top:12px;border-radius:12px;padding:13px;font-size:14px;line-height:1.5}.f.y{background:rgba(34,197,94,.12)}.f.n{background:rgba(239,68,68,.12)}
+.md{font-size:66px;text-align:center}.rk{font-size:24px;text-align:center}
+.nm{display:flex;gap:10px;margin:16px 0}.nm>div{flex:1;background:#0f172a;border-radius:11px;padding:12px;text-align:center}
+.nm b{display:block;font-size:24px}.nm small{font-size:11px;color:#94a3b8}
+.hide{display:none}
+</style></head><body><div class="b">
+
+<section id="s1" class="s on"><div class="c">
+<svg class="lg" viewBox="0 0 512 512"><defs><radialGradient id="g" cx=".4" cy=".35" r=".8"><stop offset="0" stop-color="#fff3b0"/><stop offset=".5" stop-color="#f3c43f"/><stop offset="1" stop-color="#c8961a"/></radialGradient><linearGradient id="r" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e23b3b"/><stop offset="1" stop-color="#8f1212"/></linearGradient></defs><circle cx="256" cy="256" r="244" fill="#d9a521"/><circle cx="256" cy="256" r="232" fill="url(#g)"/><circle cx="256" cy="256" r="205" fill="none" stroke="#8a5f0a" stroke-width="3"/><text x="256" y="118" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="32" fill="#5e4708">FOOD SAFETY</text><path d="M44,232 L468,232 L468,288 L44,288 Z" fill="url(#r)"/><text x="256" y="272" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="42" fill="#fff">HEAVEN FOOD</text><text x="256" y="352" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="18" fill="#5e4708">SU ALIADO EN CALIDAD</text><text x="256" y="376" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="18" fill="#5e4708">E INOCUIDAD ALIMENTARIA</text></svg>
+<h1>Reto Inocuidad</h1><p class="m">Evaluación interactiva · Resolución 2674 de 2013</p>
+<p class="in">Pon a prueba tus conocimientos en <b>inocuidad alimentaria</b>. Las preguntas <b>suben de dificultad</b> y recibes tu calificación al instante. 🎯</p>
+<label>Tu nombre completo</label><input id="nm" placeholder="Ej: María Pérez">
+<label>Grupo / curso (opcional)</label><input id="gp" placeholder="Ej: Manipuladores Turno A">
+<button class="bt" onclick="start()">¡Comenzar! →</button>
+<p class="m" style="margin-top:14px">Una herramienta de <b style="color:#fcd34d">Heaven Food</b> 🍽️</p>
+</div></section>
+
+<section id="s2" class="s"><div class="c">
+<div class="h"><span id="ct">Pregunta 1</span><span id="sc" class="p">· 0</span></div>
+<div class="bar"><i id="pg"></i></div><span id="lv" class="lv">Nivel 1</span>
+<div class="q" id="qt"></div><div id="op"></div>
+<div id="fb" class="f hide"></div>
+<button id="nx" class="bt hide" onclick="next()">Siguiente ➜</button>
+</div></section>
+
+<section id="s3" class="s"><div class="c">
+<div class="md" id="md">🏆</div><div class="rk" id="rk"></div><p class="m" id="wh"></p>
+<div class="nm"><div><b id="pc">0%</b><small>Aprobación</small></div><div><b id="gd" style="color:#22c55e">0</b><small>Nota 0-5</small></div><div><b id="pt">0</b><small>Puntos</small></div></div>
+<p class="m" id="dt"></p>
+<div class="f y" style="margin-top:14px"><b>📝 Retroalimentación</b><p id="rf" style="margin-top:5px"></p></div>
+<button class="bt" onclick="mail()">Enviar al docente ✉️</button>
+<button class="bt bg" onclick="location.reload()">Intentar de nuevo 🔁</button>
+</div></section>
+
+</div><script>
+var T="yesid.castrillon@gmail.com";
+var TP={hig:["🧼 Prácticas higiénicas","#22c55e"],eta:["🦠 ETA","#ef4444"],edu:["▪ Educación sanitaria","#3b82f6"],nor:["⚖️ Normatividad","#a855f7"],des:["🧪 Desinfectantes","#06b6d4"],con:["☣️ Contaminación","#f97316"],hac:["🎯 HACCP","#eab308"]};
+var Q=[
+{t:"hig",l:1,q:"¿Cuál es la práctica higiénica más importante para evitar contaminar los alimentos?",o:["Usar perfume","Lavarse las manos correctamente","Hablar poco","Usar reloj"],a:1,e:"El lavado de manos es la barrera #1 (Res. 2674/2013)."},
+{t:"eta",l:1,q:"¿Qué significa la sigla ETA?",o:["Tratamiento Ambiental","Enfermedad Transmitida por Alimentos","Examen Técnico","Trazabilidad"],a:1,e:"ETA = Enfermedad Transmitida por Alimentos."},
+{t:"con",l:1,q:"Un cabello o vidrio en el alimento es contaminación:",o:["Física","Emocional","Económica","Digital"],a:0,e:"Los peligros físicos son objetos extraños que pueden lesionar."},
+{t:"edu",l:2,q:"La capacitación del manipulador debe ser:",o:["Una sola vez","Continua y permanente","Opcional","Solo en visitas"],a:1,e:"La norma exige capacitación continua con registros."},
+{t:"nor",l:2,q:"La Resolución 2674 de 2013 reglamenta:",o:["El transporte","Requisitos sanitarios de alimentos","Las redes","Impuestos"],a:1,e:"Requisitos sanitarios de la cadena de alimentos para consumo humano."},
+{t:"des",l:2,q:"Antes de desinfectar SIEMPRE se debe:",o:["Aplicar sobre la suciedad","Limpiar y luego desinfectar","Secar con trapo sucio","Rociar perfume"],a:1,e:"La materia orgánica inactiva el desinfectante: primero limpiar."},
+{t:"eta",l:3,q:"La 'zona de peligro' de temperatura es:",o:["-18 a 0 °C","5 a 60 °C","60 a 100 °C","100 a 150 °C"],a:1,e:"Entre 5 y 60 °C los microbios se multiplican rápido."},
+{t:"des",l:3,q:"Para desinfectar frutas y verduras crudas, el cloro común es:",o:["500 ppm","50 ppm","5000 ppm","0 ppm"],a:1,e:"Cerca de 50 ppm de cloro libre por unos minutos."},
+{t:"hac",l:3,q:"Un Punto Crítico de Control (PCC) es una etapa donde:",o:["Se fija el precio","Se controla un peligro a nivel aceptable","Se sirve al cliente","Se hace publicidad"],a:1,e:"Fase donde el control previene/elimina/reduce un peligro (ej. cocción)."},
+{t:"con",l:4,q:"Carnes crudas en refrigeración deben ir:",o:["Encima de lo cocido","Debajo y tapadas","Mezcladas","Fuera de la nevera"],a:1,e:"Abajo y tapadas, para que sus jugos no goteen sobre lo listo."},
+{t:"hig",l:4,q:"El cabello del manipulador debe estar:",o:["Suelto si está limpio","Cubierto con cofia o gorro","Cubierto solo en verano","Recogido sin cofia"],a:1,e:"Totalmente cubierto con cofia/gorro para evitar caída al alimento."},
+{t:"hac",l:5,q:"En el HACCP, ¿qué se realiza PRIMERO?",o:["Acciones correctivas","El análisis de peligros","Documentar","Verificar"],a:1,e:"El análisis de peligros: sin conocerlos no se definen los PCC."}
+];
+var qs,ix,sc,ok,per,ans,nm,gp,ms,stk;
+function start(){nm=document.getElementById('nm').value.trim();if(!nm){document.getElementById('nm').focus();return;}gp=document.getElementById('gp').value.trim();qs=Q.slice().sort(function(a,b){return a.l-b.l});ix=0;sc=0;ok=0;stk=0;ms=0;per={};Object.keys(TP).forEach(function(k){per[k]=[0,0]});sh('s2');rn();}
+function sh(id){var a=document.querySelectorAll('.s');for(var i=0;i<a.length;i++)a[i].classList.remove('on');document.getElementById(id).classList.add('on');scrollTo(0,0);}
+function rn(){var q=qs[ix];ans=false;document.getElementById('ct').textContent='Pregunta '+(ix+1)+' de '+qs.length;document.getElementById('sc').textContent='· '+sc;document.getElementById('pg').style.width=(ix/qs.length*100)+'%';document.getElementById('lv').textContent='Nivel '+q.l;var t=TP[q.t];document.getElementById('lv').style.background=t[1];document.getElementById('qt').textContent=t[0]+' — '+q.q;var h='';for(var i=0;i<q.o.length;i++)h+='<button class="o" onclick="pk('+i+')">'+String.fromCharCode(65+i)+'. '+q.o[i]+'</button>';document.getElementById('op').innerHTML=h;document.getElementById('fb').className='f hide';document.getElementById('nx').className='bt hide';}
+function pk(i){if(ans)return;ans=true;var q=qs[ix];var g=i===q.a;per[q.t][1]++;var b=document.querySelectorAll('#op .o');for(var j=0;j<b.length;j++){b[j].disabled=true;if(j===q.a)b[j].className='o ok';if(j===i&&!g)b[j].className='o no';}var add=0;if(g){ok++;per[q.t][0]++;stk++;if(stk>ms)ms=stk;add=100*q.l+(stk>=2?25*(stk-1):0);sc+=add;}else stk=0;document.getElementById('sc').textContent='· '+sc;var f=document.getElementById('fb');f.className='f '+(g?'y':'n');f.innerHTML='<b>'+(g?'✓ ¡Correcto! +'+add+' pts':'✗ Incorrecto')+'</b><p style="margin-top:5px">'+q.e+'</p>';var n=document.getElementById('nx');n.className='bt';n.textContent=(ix+1<qs.length)?'Siguiente ➜':'Ver resultados 🎉';}
+function next(){if(ix+1<qs.length){ix++;rn();}else fin();}
+function fin(){var n=qs.length,pc=Math.round(ok/n*100),gd=(pc/100*5).toFixed(1),rk,md;if(pc>=90){rk="Maestro de la Inocuidad";md="🏆";}else if(pc>=75){rk="Experto";md="🥇";}else if(pc>=60){rk="Competente";md="🥈";}else if(pc>=40){rk="Aprendiz";md="🥉";}else{rk="Principiante";md="🌱";}document.getElementById('md').textContent=md;document.getElementById('rk').textContent=rk;document.getElementById('wh').textContent=nm+(gp?' · '+gp:'');document.getElementById('pc').textContent=pc+'%';document.getElementById('gd').textContent=gd;document.getElementById('pt').textContent=sc;document.getElementById('dt').textContent=ok+' de '+n+' correctas · racha máxima 🔥 '+ms;var msg;if(pc>=75)msg="¡Muy buen dominio de la inocuidad! Sigue así.";else if(pc>=60)msg="Buen avance; refuerza algunos temas.";else if(pc>=40)msg="Necesitas reforzar conceptos clave de la Res. 2674/2013.";else msg="Repasa los fundamentos de inocuidad y BPM.";document.getElementById('rf').textContent=msg;window._R={nm:nm,gp:gp,pc:pc,gd:gd,sc:sc,rk:rk,ok:ok,n:n,ms:ms,msg:msg};sh('s3');}
+function mail(){var r=window._R;var b="Reto Inocuidad - Heaven Food
+
+Estudiante: "+r.nm+"
+Grupo: "+(r.gp||"N/A")+"
+Fecha: "+new Date().toLocaleString()+"
+
+Aciertos: "+r.ok+"/"+r.n+" ("+r.pc+"%)
+Nota 0-5: "+r.gd+"
+Nivel: "+r.rk+"
+Puntos: "+r.sc+"
+Racha: "+r.ms+"
+
+"+r.msg;location.href="mailto:"+T+"?subject="+encodeURIComponent("Resultado "+r.nm+" ("+r.pc+"%)")+"&body="+encodeURIComponent(b);}
+</script></body></html>
