@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <rect width="400" height="240" fill="#f8fafc"/>
+  <rect width="400" height="240" fill="#0284c7" opacity="0.07"/>
+    <g stroke="#0284c7" stroke-width="6" stroke-linecap="round">
+      <line x1="200" y1="55" x2="200" y2="145"/><line x1="160" y1="78" x2="240" y2="122"/><line x1="240" y1="78" x2="160" y2="122"/>
+      <path d="M200 55 l-10 10 M200 55 l10 10 M200 145 l-10 -10 M200 145 l10 -10"/>
+      <path d="M160 78 l0 14 M160 78 l14 0 M240 122 l0 -14 M240 122 l-14 0"/>
+      <path d="M240 78 l-14 0 M240 78 l0 14 M160 122 l14 0 M160 122 l0 -14"/>
+    </g>
+  <rect x="0" y="198" width="400" height="42" fill="#0284c7"/>
+  <text x="200" y="225" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#ffffff" text-anchor="middle">Cadena de Frío</text>
+</svg>
