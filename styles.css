@@ -1,0 +1,127 @@
+:root{
+  --azul:#2563eb; --azul-osc:#1e40af; --morado:#7c3aed;
+  --verde:#16a34a; --rojo:#dc2626; --gris:#64748b;
+  --bg:#f1f5f9; --card:#ffffff; --texto:#0f172a;
+  --sombra:0 10px 30px rgba(2,6,23,.12);
+  --radio:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;
+  background:linear-gradient(135deg,#eef2ff,#ecfeff 60%,#f0fdf4);
+  color:var(--texto);min-height:100vh;
+}
+.app{max-width:760px;margin:0 auto;padding:24px 16px 60px}
+
+/* ---- pantallas ---- */
+.pantalla{display:none;animation:fade .4s ease}
+.pantalla.activa{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* ---- tarjetas ---- */
+.card{
+  background:var(--card);border-radius:var(--radio);
+  box-shadow:var(--sombra);padding:30px 28px;text-align:center;
+}
+.logo{width:96px;height:96px;margin:0 auto 8px;display:block}
+h1{font-size:1.6rem;line-height:1.2;margin-bottom:4px;color:var(--azul-osc)}
+.subtitulo{color:var(--gris);margin-bottom:18px;font-weight:600}
+.info-examen{
+  display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:22px;
+}
+.info-examen span{
+  background:#eff6ff;color:var(--azul-osc);border-radius:999px;
+  padding:6px 14px;font-size:.82rem;font-weight:600;
+}
+
+/* ---- formulario ---- */
+form{text-align:left;display:flex;flex-direction:column;gap:14px}
+label{font-weight:600;font-size:.9rem;display:flex;flex-direction:column;gap:6px;color:#334155}
+input{
+  padding:12px 14px;border:2px solid #e2e8f0;border-radius:12px;
+  font-size:1rem;transition:border .2s;
+}
+input:focus{outline:none;border-color:var(--azul)}
+.error{color:var(--rojo);font-size:.85rem;min-height:1em;font-weight:600;text-align:center}
+
+/* ---- botones ---- */
+.btn{
+  border:none;border-radius:12px;padding:14px 20px;font-size:1rem;
+  font-weight:700;cursor:pointer;transition:transform .1s,box-shadow .2s,opacity .2s;
+}
+.btn:active{transform:scale(.98)}
+.btn-primario{background:var(--azul);color:#fff;box-shadow:0 6px 16px rgba(37,99,235,.35)}
+.btn-primario:disabled{background:#cbd5e1;box-shadow:none;cursor:not-allowed}
+.btn-secundario{background:#e2e8f0;color:#334155}
+.btn-wa{background:#25d366;color:#fff}
+
+/* ---- barra superior del quiz ---- */
+.quiz-top{
+  display:flex;align-items:center;gap:16px;margin-bottom:16px;
+  background:var(--card);border-radius:var(--radio);padding:14px 18px;box-shadow:var(--sombra);
+}
+.progreso{flex:1}
+#contador-preguntas{font-weight:700;font-size:.9rem;color:#334155}
+.barra{height:8px;background:#e2e8f0;border-radius:99px;margin-top:8px;overflow:hidden}
+.barra-fill{height:100%;width:0;background:linear-gradient(90deg,var(--azul),var(--morado));transition:width .3s}
+
+/* ---- cronómetro ---- */
+.cronometro{position:relative;width:58px;height:58px;flex:none}
+.crono-svg{width:100%;height:100%;transform:rotate(-90deg)}
+.crono-bg{fill:none;stroke:#e2e8f0;stroke-width:3}
+.crono-arco{fill:none;stroke:var(--azul);stroke-width:3;stroke-linecap:round;
+  stroke-dasharray:100;stroke-dashoffset:0;transition:stroke-dashoffset 1s linear,stroke .3s}
+#crono-num{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:1.1rem;color:#334155}
+.cronometro.alerta .crono-arco{stroke:var(--rojo)}
+.cronometro.alerta #crono-num{color:var(--rojo)}
+.cronometro.alerta{animation:latido .6s infinite}
+@keyframes latido{0%,100%{transform:scale(1)}50%{transform:scale(1.12)}}
+
+/* ---- pregunta ---- */
+.pregunta-card{text-align:center}
+.etiqueta-tema{
+  display:inline-block;background:#eff6ff;color:var(--azul-osc);
+  border-radius:999px;padding:5px 14px;font-size:.78rem;font-weight:700;margin-bottom:14px;
+}
+.img-pregunta{
+  width:100%;max-width:360px;height:auto;border-radius:14px;margin:0 auto 18px;
+  display:block;box-shadow:0 4px 14px rgba(2,6,23,.08);background:#f8fafc;
+}
+#texto-pregunta{font-size:1.2rem;margin-bottom:20px;color:#0f172a;line-height:1.35}
+.opciones{display:flex;flex-direction:column;gap:12px;margin-bottom:20px}
+.opcion{
+  text-align:left;padding:14px 16px;border:2px solid #e2e8f0;border-radius:12px;
+  background:#fff;cursor:pointer;font-size:1rem;transition:all .15s;display:flex;gap:10px;align-items:center;
+}
+.opcion:hover{border-color:var(--azul);background:#f8fafc}
+.opcion .letra{
+  width:28px;height:28px;flex:none;border-radius:50%;background:#e2e8f0;color:#475569;
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.9rem;
+}
+.opcion.sel{border-color:var(--azul);background:#eff6ff}
+.opcion.sel .letra{background:var(--azul);color:#fff}
+.opcion.correcta{border-color:var(--verde);background:#f0fdf4}
+.opcion.correcta .letra{background:var(--verde);color:#fff}
+.opcion.incorrecta{border-color:var(--rojo);background:#fef2f2}
+.opcion.incorrecta .letra{background:var(--rojo);color:#fff}
+.opcion.bloqueada{pointer-events:none}
+
+/* ---- resultado ---- */
+.veredicto-badge{
+  width:110px;height:110px;border-radius:50%;margin:0 auto 12px;
+  display:flex;align-items:center;justify-content:center;font-size:3rem;color:#fff;
+}
+.veredicto-badge.ok{background:var(--verde);box-shadow:0 10px 24px rgba(22,163,74,.4)}
+.veredicto-badge.no{background:var(--rojo);box-shadow:0 10px 24px rgba(220,38,38,.4)}
+.resultado-detalle{color:var(--gris);font-size:1.05rem;margin:6px 0 18px;font-weight:600}
+.certificado-canvas{
+  width:100%;height:auto;border-radius:12px;border:1px solid #e2e8f0;margin-bottom:18px;
+}
+.acciones{display:flex;flex-direction:column;gap:12px}
+.estado-envios{margin-top:14px;font-size:.85rem;color:var(--gris);white-space:pre-line}
+
+@media(min-width:560px){
+  .acciones{flex-direction:row;flex-wrap:wrap;justify-content:center}
+  .acciones .btn{flex:1;min-width:180px}
+}
