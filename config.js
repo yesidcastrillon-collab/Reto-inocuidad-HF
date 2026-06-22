@@ -25,9 +25,9 @@ const APP_CONFIG = {
   email: {
     habilitado: true,
     correoDocente: "yesid.castrillon@gmail.com",
-    serviceId: "TU_SERVICE_ID",      // <-- reemplazar
-    templateId: "TU_TEMPLATE_ID",    // <-- reemplazar
-    publicKey: "TU_PUBLIC_KEY",      // <-- reemplazar
+    serviceId: "TU_SERVICE_ID",      // <-- reemplazar IJrnmWsqrXTKyRZFa
+    templateId: "TU_TEMPLATE_ID",    // <-- reemplazar IJrnmWsqrXTKyRZFa
+    publicKey: "TU_PUBLIC_KEY",      // <-- reemplazar IJrnmWsqrXTKyRZFa
   },
 
   /* ---- 2) WHATSAPP ------------------------------------------------------ */
