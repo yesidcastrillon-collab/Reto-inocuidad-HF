@@ -1,23 +1,26 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Reto Inocuidad · Heaven Food</title>
-<style>body{font-family:Arial,sans-serif;background:#0f172a;color:#e2e8f0;margin:0;padding:18px}.c{max-width:560px;margin:0 auto;background:#1e293b;border-radius:16px;padding:22px}h1{text-align:center;font-size:24px}.m{text-align:center;color:#94a3b8;font-size:13px}input{width:100%;padding:12px;margin:10px 0;border-radius:10px;border:1px solid #334155;background:#0f172a;color:#fff;font-size:16px}.bt{width:100%;padding:14px;border:0;border-radius:12px;font-size:16px;font-weight:700;color:#04210f;background:#22c55e;cursor:pointer;margin-top:8px}.o{display:block;width:100%;text-align:left;background:#0f172a;border:2px solid #334155;color:#fff;padding:12px;border-radius:10px;margin:7px 0;cursor:pointer;font-size:15px}.o.ok{border-color:#22c55e;background:#14532d}.o.no{border-color:#ef4444;background:#4c1d1d}.f{margin-top:10px;padding:12px;border-radius:10px;background:#0f172a;font-size:14px}.lv{display:inline-block;background:#2563eb;padding:3px 8px;border-radius:6px;font-size:11px;font-weight:700;margin-bottom:8px}.hide{display:none}</style></head>
-<body><div class="c" id="app"></div>
-<script>
-var T="yesid.castrillon@gmail.com";
-var Q=[
-{l:1,q:"🧼 ¿Cuál es la práctica higiénica más importante para no contaminar los alimentos?",o:["Usar perfume","Lavarse las manos correctamente","Hablar poco"],a:1,e:"El lavado de manos es la barrera #1 (Res. 2674/2013)."},
-{l:1,q:"🦠 ¿Qué significa la sigla ETA?",o:["Tratamiento Ambiental","Enfermedad Transmitida por Alimentos","Examen Técnico"],a:1,e:"ETA = Enfermedad Transmitida por Alimentos."},
-{l:2,q:"🧪 Antes de desinfectar una superficie SIEMPRE se debe:",o:["Aplicar sobre la suciedad","Limpiar y luego desinfectar","Secar con trapo sucio"],a:1,e:"La materia orgánica inactiva el desinfectante: primero limpiar."},
-{l:3,q:"🌡️ La 'zona de peligro' de temperatura es:",o:["-18 a 0 °C","5 a 60 °C","60 a 100 °C"],a:1,e:"Entre 5 y 60 °C los microbios se multiplican rápido."},
-{l:4,q:"⚖️ La Resolución 2674 de 2013 reglamenta:",o:["El transporte","Requisitos sanitarios de alimentos","Los impuestos"],a:1,e:"Requisitos sanitarios de la cadena de alimentos para consumo humano."},
-{l:5,q:"🎯 En el HACCP, ¿qué se hace PRIMERO?",o:["Acciones correctivas","El análisis de peligros","Verificar"],a:1,e:"El análisis de peligros: sin conocerlos no se definen los PCC."}
-];
-var ix,sc,ok,nm;
-function H(s){document.getElementById('app').innerHTML=s;}
-function inicio(){H('<h1>🏅 Reto Inocuidad</h1><p class="m">Heaven Food · Resolución 2674 de 2013</p><input id="nm" placeholder="Tu nombre"><button class="bt" onclick="ir()">¡Comenzar! →</button>');}
-function ir(){nm=(document.getElementById('nm').value||'Estudiante').trim();ix=0;sc=0;ok=0;preg();}
-function preg(){var q=Q[ix];var h='<span class="lv">Nivel '+q.l+'</span><p class="m" style="text-align:right">Pregunta '+(ix+1)+'/'+Q.length+' · · '+sc+'</p><h3>'+q.q+'</h3>';for(var i=0;i<q.o.length;i++)h+='<button class="o" onclick="resp('+i+')">'+q.o[i]+'</button>';h+='<div id="fb"></div>';H(h);}
-function resp(i){var q=Q[ix];var g=i===q.a;var b=document.querySelectorAll('.o');for(var j=0;j<b.length;j++){b[j].disabled=true;if(j===q.a)b[j].className='o ok';if(j===i&&!g)b[j].className='o no';}if(g){ok++;sc+=100*q.l;}document.getElementById('fb').innerHTML='<div class="f">'+(g?'✓ ¡Correcto! +'+(100*q.l)+' pts':'✗ Incorrecto')+'<br>'+q.e+'</div><button class="bt" onclick="sig()">'+(ix+1<Q.length?'Siguiente ➜':'Ver resultado 🎉')+'</button>';}
-function sig(){ix++;if(ix<Q.length)preg();else fin();}
-function fin(){var pc=Math.round(ok/Q.length*100),gd=(pc/100*5).toFixed(1),r=pc>=75?'Experto 🥇':pc>=50?'Competente 🥈':'Aprendiz 🌱';var b="Reto Inocuidad - Heaven Food%0AEstudiante: "+nm+"%0AAciertos: "+ok+"/"+Q.length+" ("+pc+"%25)%0ANota 0-5: "+gd+"%0ANivel: "+r;H('<h1>'+r+'</h1><p class="m">'+nm+'</p><h2 style="text-align:center">'+pc+'% · Nota '+gd+'/5</h2><p class="m">'+ok+' de '+Q.length+' correctas · '+sc+' puntos</p><a class="bt" style="display:block;text-align:center;text-decoration:none" href="mailto:'+T+'?subject=Resultado '+nm+'&body='+b+'">Enviar al docente ✉️</a><button class="bt" style="background:#334155;color:#fff" onclick="inicio()">Intentar de nuevo 🔁</button>');}
-inicio();
-</script></body></html>
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>La evaluación se trasladó | HEAVEN FOOD</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://heavenfood-alimentosdelcielo.netlify.app/evaluacion.html">
+<meta http-equiv="refresh" content="0; url=https://heavenfood-alimentosdelcielo.netlify.app/evaluacion.html">
+<style>
+  body{margin:0;min-height:100vh;display:grid;place-items:center;background:#F0F7FC;color:#0F172A;font-family:system-ui,-apple-system,"Segoe UI",Arial,sans-serif;padding:16px}
+  main{max-width:520px;background:#fff;border:1px solid #DCE7F0;border-radius:18px;padding:28px 22px;text-align:center}
+  h1{font-size:1.4rem;margin:0 0 8px}
+  p{color:#526072;margin:0 0 18px;line-height:1.5}
+  a{display:inline-block;background:#0369A1;color:#fff;text-decoration:none;font-weight:700;padding:13px 20px;border-radius:12px}
+</style>
+</head>
+<body>
+<main>
+  <h1>La evaluación de HEAVEN FOOD se trasladó</h1>
+  <p>Ahora presentas la evaluación y obtienes tu certificado verificable en el sitio oficial de HEAVEN FOOD.</p>
+  <a href="https://heavenfood-alimentosdelcielo.netlify.app/evaluacion.html">Ir a la evaluación en línea</a>
+</main>
+<script>location.replace("https://heavenfood-alimentosdelcielo.netlify.app/evaluacion.html");</script>
+</body>
+</html>
